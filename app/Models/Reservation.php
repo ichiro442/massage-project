@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Reservation extends Model
+{
+    protected $fillable = ['name','phoneNumber','mail','calendar','times'];
+    public function reservate()
+    {
+        return $this->belongsTo('App\Goal');
+        // 一対多で、多側から一側に繋がる道の名前がbelongsTo
+
+    }
+}
