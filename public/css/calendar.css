@@ -1,59 +1,61 @@
 /* 共通 */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ul,
 li {
-  list-style: none;
+    list-style: none;
 }
 a {
     color: black;
-  text-decoration: none;
+    text-decoration: none;
 }
 h3 {
-  font-size: 1.8rem;
+    font-size: 1.8rem;
 }
 /* body */
 body {
-  margin: 0;
+    margin: 0;
+    width: 100%;
+    height: 54rem;
 }
 
 .container {
-  width: 100%;
-  height: 54rem;
-  text-align: center;
+    width: 100%;
+    height: 54rem;
+    text-align: center;
 }
 .thisMonth {
-  background-color: pink;
+    background-color: pink;
 }
-.beforeMonth{
-  background-color: yellow;
+.beforeMonth {
+    background-color: yellow;
 }
-.afterMonth{
-  background-color: yellow;
+.afterMonth {
+    background-color: yellow;
 }
 .calendarTable {
-  width: 100%;
-  height: 100%;
-  /* background-color: blue; */
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
 }
 .dayOfWeek {
-  background-color: #aad6ec;
-  height: 3rem;
+    background-color: #aad6ec;
+    height: 3rem;
 }
 .dayNumber {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 .today {
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: orange !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: orange !important;
 }
 /* .sunday {
   color: red;
@@ -61,11 +63,56 @@ body {
 .saturday{
     color: blue;
 } */
-th:nth-of-type(7), td:nth-of-type(7) {
+th:nth-of-type(7),
+td:nth-of-type(7) {
     /* color: blue ; */
     background-color: #4545f5;
 }
-th:nth-of-type(1), td:nth-of-type(1) {
+th:nth-of-type(1),
+td:nth-of-type(1) {
     /* color: red ; */
     background-color: #e45252;
+}
+/* -----------------dayDetail.blade.php 予約状況---------------------- */
+/* .container{
+  width: 100%;
+  height: 100%;
+  background-color: red;
+} */
+.dayDetailcontainer {
+    /* height: 58rem; */
+    background-color: thistle;
+    flex-direction: column;
+}
+.dayDetail {
+    width: 100%;
+    height: 20rem;
+}
+.dayDetail h3 {
+  margin: 0;
+    text-align: center;
+}
+.dayDetailMorning {
+    height: 100%;
+    background-color: #3983ff;
+}
+.dayDetailAfternoon {
+    height: 100%;
+    background-color: #fd7b92;
+}
+.dayDetailNight {
+    height: 100%;
+    background-color: #149830;
+}
+.dayDetailName {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem;
+  }
+  .dayDetail-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
 }

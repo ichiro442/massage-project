@@ -17,7 +17,7 @@ class CalendarController extends Controller
 
 //予約状況の名前をクリックしてそのユーザーの予約内容を表示する
     public function showCustomer($id){
-        $customerDetail = \App\Models\Reservation::find($id);
+        $customerDetail = \App\Models\Reservation::find($id);//ここでidを受け取って個人個人に振り分けてる
         // dd($customerDetail->name);
         return view('customer',compact('customerDetail'));
     }
