@@ -8,11 +8,26 @@ use App\Http\Controllers\ReservationController;
 class CalendarController extends Controller
 {
 //なんのメソッド？
-    public function detailshow($id){
+    public function detailshow($today){
+        // $calendar = \App\Models\Reservation::table('reservations')->where('calendar', $today)->first();
             $reservation = \App\Models\Reservation::all();
-            // dd($reservation->ToArray()); 
-            // dd($reservation);
-        return view('dayDetail',compact('reservation'));
+            // $calendar = $reservation->values('calendar');
+            $calendar = $reservation->pluck('calendar');
+            // dd($calendar);
+            // dd($id);
+        //     $today = request()->path();
+        // $hoge = \App\Level_standard::where("level", $user->level)->first(); 
+        $todayReservations = \App\Models\Reservation::where("calendar",$today)->get();
+        // dd($re);
+        // if($today == ($calendar->calendar == $today)){
+        //     $names = $reservation->pluck('name');
+        // }
+        $names = $reservation->pluck('name');
+           
+
+            // dd($names->ToArray()); 
+            // dd($today);
+        return view('dayDetail',compact('reservation','today','calendar','names','todayReservations'));
         }//,'name','phoneNumber','mail','calender','times'
 
 
@@ -75,11 +90,21 @@ class CalendarController extends Controller
 
             //もし今日の日付だったらクラスをつける
             if($today == $date){
-            $week .= '<td class="today">'.'<a href="dayDetail/{{ $title }}">' . $day.'</a>';
-            
-            } else {
+                $ym1 = "{{ $ym}} ";
+                if($day < 10){
+                    $week .= '<td class="today">'.'<a href="dayDetail/' .$ym. '-0'. $day.'">' . $day.'</a>';
+                }else{
+                    $week .= '<td class="today">'.'<a href="dayDetail/' .$ym. '-'. $day.'">' . $day.'</a>';
+                }
+           
+            // print '<a href="download.php?aaa=' . $file . '">'.$title.'</a><br />';
+            } else{
             //今日以外の日付は普通に出力する
-            $week .= '<td class="dayNumber">'. '<a href="dayDetail/{{ $title }}">'. $day.'</a>';
+            if($day < 10){
+                $week .= '<td class="dayNumber">'. '<a href="dayDetail/' .$ym.'-0'. $day.'">'. $day.'</a>';
+            }else{
+                $week .= '<td class="dayNumber">'. '<a href="dayDetail/' .$ym.'-'. $day.'">'. $day.'</a>';
+            }
         }
         $week .= '</td>';
         
