@@ -27,9 +27,13 @@ Route::get("/confirm", "App\Http\Controllers\ReservationController@confirm")->wh
 Route::post("/confirm/register", "App\Http\Controllers\ReservationController@register")->where('id','[0-9]+');
 
 //予約管理画面
-Route::get('/dayDetail/{id}','App\Http\Controllers\CalendarController@detailshow');
+Route::get('/dayDetail/{today}','App\Http\Controllers\CalendarController@detailshow');
 
 Route::get('/calendar','App\Http\Controllers\CalendarController@dayShow');
+
+Route::get('/customer/{id}','App\Http\Controllers\CalendarController@showCustomer');
+
+
 
 
 

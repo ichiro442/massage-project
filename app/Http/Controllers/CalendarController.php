@@ -7,29 +7,20 @@ use App\Http\Controllers\ReservationController;
 
 class CalendarController extends Controller
 {
-//なんのメソッド？
+//カレンダーの日付をクリックしてその日の予約状況を表示するメソッド
     public function detailshow($today){
-        // $calendar = \App\Models\Reservation::table('reservations')->where('calendar', $today)->first();
-            $reservation = \App\Models\Reservation::all();
-            // $calendar = $reservation->values('calendar');
-            $calendar = $reservation->pluck('calendar');
-            // dd($calendar);
-            // dd($id);
-        //     $today = request()->path();
-        // $hoge = \App\Level_standard::where("level", $user->level)->first(); 
+        $reservation = \App\Models\Reservation::all();
+        $calendar = $reservation->pluck('calendar');
         $todayReservations = \App\Models\Reservation::where("calendar",$today)->get();
-        // dd($re);
-        // if($today == ($calendar->calendar == $today)){
-        //     $names = $reservation->pluck('name');
-        // }
-        $names = $reservation->pluck('name');
-           
+        return view('dayDetail',compact('reservation','today','calendar','todayReservations'));
+        }
 
-            // dd($names->ToArray()); 
-            // dd($today);
-        return view('dayDetail',compact('reservation','today','calendar','names','todayReservations'));
-        }//,'name','phoneNumber','mail','calender','times'
-
+//予約状況の名前をクリックしてそのユーザーの予約内容を表示する
+    public function showCustomer($id){
+        $customerDetail = \App\Models\Reservation::find($id);
+        // dd($customerDetail->name);
+        return view('customer',compact('customerDetail'));
+    }
 
 //カレンダーを表示されるメソッド
     public function dayShow(Request $req){
