@@ -85,8 +85,9 @@ header {
 .backBtn {
     text-align: center;
     width: 4rem;
-    background-color: #16c73b;
+    background-color: yellow;
     color: black;
+    border: 1px solid black;
 }
 .dayDetailcontainer {
     /* height: 58rem; */

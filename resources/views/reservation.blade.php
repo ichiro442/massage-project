@@ -90,10 +90,12 @@
 					</div>
 				@endif
       </div>
-      <div class="phoneResevation fadein">
-        <p>電話予約はこちら</p>
-        <a href="tel:03-3209-1111">03-3209-1111</a>
-      </div>
+      <footer>
+        <div class="phoneResevation fadein">
+          <p>電話予約はこちら</p>
+          <a href="tel:03-3209-1111">03-3209-1111</a>
+        </div>
+      </footer>
    </div>
 <!-- -------------------------------確認画面------------------------------------------ -->
 <!-- <div class="confirm_wrapper flex">
