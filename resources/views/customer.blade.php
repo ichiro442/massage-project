@@ -34,6 +34,10 @@
                 <td>{{ $customerDetail->times }}</td>
             </tr>
         </table>
+        <div class="customerBtns flex">
+            <a class="customerBtn" href="/calendar">カレンダー</a>
+            <a class="customerBtn" href="/customer/destroy/{{ $customerDetail->id }}">削除</a>
+        </div>
     </div>
 </body>
 </html>

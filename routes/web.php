@@ -33,6 +33,10 @@ Route::get('/calendar','App\Http\Controllers\CalendarController@dayShow');
 
 Route::get('/customer/{id}','App\Http\Controllers\CalendarController@showCustomer');
 
+Route::get('/customer/destroy/{id}','App\Http\Controllers\CalendarController@destroy');
+
+
+
 
 
 

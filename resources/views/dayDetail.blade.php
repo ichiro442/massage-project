@@ -7,9 +7,13 @@
         <link rel="stylesheet" href="{{ asset('css/calendar.css') }}">
         <title>予約状況</title>
 </head>
-<body>
+<body class="dayDetailBody">
+        <header class="flex">
+                <span></span>
+                <h2>{{$today}} 予約状況</h2>
+                <a class="backBtn" href="/calendar">戻る</a>
+        </header>
         <div class="dayDetailcontainer flex">
-        <h2>{{$today}} 予約状況</h2>
                 <section class="dayDetail">
                         <div class="dayDetailMorning">
                                 <h3>＜午前の部＞</h3>

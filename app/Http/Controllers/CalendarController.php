@@ -110,7 +110,14 @@ class CalendarController extends Controller
             $week = '';
         }
     }
-
         return view('calendar',compact('prev','title','next','weeks','day'));
     }
+    //顧客を削除するメソッド
+    function destroy($id)
+    {
+    $reservation = \App\Models\Reservation::find($id);
+    $reservation->delete();
+    return redirect("/dayDetail/{$reservation->calendar}");
+    }
+
 }
