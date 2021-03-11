@@ -227,18 +227,6 @@ select {
   margin: 1.5rem;
   text-align: center;
 }
-/* --------------------色選び---------------------------- */
-.colors {
-  width: 100%;
-  height: 5rem;
-  background-color: red;
-}
-.color {
-  width: 100%;
-  height: 100%;
-}
-/* --------------------色選び---------------------------- */
-
 /* フェードイン */
 .text-focus-in {
   -webkit-animation: text-focus-in 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -320,19 +308,31 @@ select {
   width: 50%;
   height: 60rem;
   margin: 0 auto;
-  background-color: red;
+  flex-direction: column;
+  position: absolute;
 }
 .confirm_container {
   width: 70%;
   flex-direction: column;
 }
+.confirm_container h3{
+  background-color: #5ae45a;
+  font-size: 1.6rem;
+}
 .confirmBox {
   flex-direction: column;
   height: 25rem;
-  border: 2px solid #fdfbfb;
+}
+.confirmTable{
+  border: 2px solid gray;
+  display: inline-table;
+  background-color: #fff;
+}
+.confirmTable tr{
+  border: 1px solid gray;
 }
 .comfirm_btn {
-  background-color: #062d9f;
+  background-color: #5ae45a;
   height: 2rem;
   width: 9rem;
   margin: 1rem;
@@ -424,6 +424,9 @@ table tr {
   .confirm_wrapper {
     width: 100%;
   }
+  .confirmImgs{
+  
+  }  
   .confirm_container {
     width: 100%;
   }

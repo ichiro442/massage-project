@@ -24,7 +24,7 @@ Route::post("/confirm/2", "App\Http\Controllers\ReservationController@send")->na
 
 Route::get("/confirm", "App\Http\Controllers\ReservationController@confirm")->where('id','[0-9]+');
 
-Route::post("/confirm/register", "App\Http\Controllers\ReservationController@register")->where('id','[0-9]+');
+// Route::post("/confirm/register", "App\Http\Controllers\ReservationController@register")->where('id','[0-9]+');
 
 //予約管理画面
 Route::get('/dayDetail/{today}','App\Http\Controllers\CalendarController@detailshow');

@@ -38,7 +38,7 @@ class ReservationController extends Controller
         $calendar = $req->input("calendar");
         $times = $req->input("times");
 
-         // 受け取った情報を保存する
+        //  受け取った情報を保存する
     \App\Models\Reservation::create([
       "name" => $name,
       "phoneNumber" => $phoneNumber,
@@ -46,13 +46,16 @@ class ReservationController extends Controller
       "calendar" => $calendar,
       "times" => $times
     ]); 
-
-      $reservation = \App\Models\Reservation::find(1);
-
-      // 'name','phoneNumber','mail','calender','times'
-        return view('confirm',compact('name','phoneNumber','mail','calendar','times','reservation'));
+        return view('confirm',compact('name','phoneNumber','mail','calendar','times'));
     }
+    
   //   function register(Request $req){
+  //     $name = $req->input("name");
+  //     dd($req);
+  //     $phoneNumber = $req->input("phoneNumber");
+  //     $mail = $req->input("mail");
+  //     $calendar = $req->input("calendar");
+  //     $times = $req->input("times");
 
   //   // 受け取った情報を保存する
   //   \App\Models\Reservation::create([
