@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/calendar.css') }}">
     <title>顧客ページ</title>
 </head>
-<body>
+<body class="customerBody">
     <div class="customerContainer flex">
         <div class="customerTitle flex">
             <h2>顧客予約内容</h2>
@@ -35,7 +35,7 @@
             </tr>
         </table>
         <div class="customerBtns flex">
-            <a class="customerBtn" href="/calendar">カレンダー</a>
+            <a class="customerBtn" href="/dayDetail/{{ $customerDetail->calendar }}">戻る</a>
             <a class="customerBtn" href="/customer/destroy/{{ $customerDetail->id }}">削除</a>
         </div>
     </div>
