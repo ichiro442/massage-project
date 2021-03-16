@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\ReservationController;
+use Illuminate\Support\Facades\Auth; 
 
 class CalendarController extends Controller
 {
+    public function login(){
+        return view('welcome');
+    }
 //カレンダーの日付をクリックしてその日の予約状況を表示するメソッド
     public function detailshow($today){
         $reservation = \App\Models\Reservation::all();

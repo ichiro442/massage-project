@@ -29,6 +29,8 @@ Route::get("/confirm", "App\Http\Controllers\ReservationController@confirm")->wh
 //予約管理画面
 Route::get('/dayDetail/{today}','App\Http\Controllers\CalendarController@detailshow');
 
+Route::get('/login','App\Http\Controllers\CalendarController@login');
+
 Route::get('/calendar','App\Http\Controllers\CalendarController@dayShow');
 
 Route::get('/customer/{id}','App\Http\Controllers\CalendarController@showCustomer');
@@ -41,3 +43,7 @@ Route::get('/customer/destroy/{id}','App\Http\Controllers\CalendarController@des
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
