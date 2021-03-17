@@ -8,15 +8,6 @@
 <body>
 
 <div class="container">
-    <!-- <a class="dropdown-item" href=""
-    onclick="event.preventDefault();
-    document.getElementById('logout-form').submit();">
-        {{ __('Logout') }}
-    </a>
-
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-        @csrf
-    </form> -->
 <a href="{{ route('loginPage') }}">logout</a>
         <div class="thisMonth flex">
             <h3><a class="beforeMonth" href="?ym={{ $prev }}">&lt;</a> {{ $title }}<a class="afterMonth" href="?ym={{ $next }}">&gt;</a></h3>
