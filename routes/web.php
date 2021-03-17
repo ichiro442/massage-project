@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //予約入力画面
-Route::get("/reservation", "App\Http\Controllers\ReservationController@create")->where('id','[0-9]+')->name('create');
+Route::get("/", "App\Http\Controllers\ReservationController@create")->where('id','[0-9]+')->name('create');
 
 Route::post("/confirm/2", "App\Http\Controllers\ReservationController@send")->name('send');
 
@@ -29,9 +29,9 @@ Route::get("/confirm", "App\Http\Controllers\ReservationController@confirm")->wh
 //予約管理画面
 Route::get('/dayDetail/{today}','App\Http\Controllers\CalendarController@detailshow');
 
-Route::get('/','App\Http\Controllers\CalendarController@login');
+Route::get('/loginPage','App\Http\Controllers\CalendarController@loginPage')->name('loginPage');
 
-Route::get('/calendar','App\Http\Controllers\CalendarController@dayShow');
+Route::get('/calendar','App\Http\Controllers\CalendarController@dayShow')->name('calendar');
 
 Route::get('/customer/{id}','App\Http\Controllers\CalendarController@showCustomer');
 

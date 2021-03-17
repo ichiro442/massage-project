@@ -42,7 +42,7 @@
             </div>
                     <div class="comfirm_btns flex">
                         <div class="comfirm_btn button">
-                            <a class="backBtn button" href="/reservation">TOP</a>
+                            <a class="backBtn button" href="{{ route('create') }}">TOP</a>
                         </div>
                         <!-- <div class="sendBtns">
                             <button class="sendBtn button">予約確定</button>
