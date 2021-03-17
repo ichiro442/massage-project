@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class CalendarController extends Controller
 {
     public function login(){
-        return view('welcome');
+        return view('login');
     }
 //カレンダーの日付をクリックしてその日の予約状況を表示するメソッド
     public function detailshow($today){

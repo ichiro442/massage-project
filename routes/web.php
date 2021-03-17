@@ -29,7 +29,7 @@ Route::get("/confirm", "App\Http\Controllers\ReservationController@confirm")->wh
 //予約管理画面
 Route::get('/dayDetail/{today}','App\Http\Controllers\CalendarController@detailshow');
 
-Route::get('/login','App\Http\Controllers\CalendarController@login');
+Route::get('/','App\Http\Controllers\CalendarController@login');
 
 Route::get('/calendar','App\Http\Controllers\CalendarController@dayShow');
 
