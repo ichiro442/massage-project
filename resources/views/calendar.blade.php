@@ -8,10 +8,13 @@
 <body>
 
 <div class="container">
-<a href="{{ route('loginPage') }}">logout</a>
+    <header>
         <div class="thisMonth flex">
+            <span></span>
             <h3><a class="beforeMonth" href="?ym={{ $prev }}">&lt;</a> {{ $title }}<a class="afterMonth" href="?ym={{ $next }}">&gt;</a></h3>
+            <a class="backBtn" href="{{ route('loginPage') }}">Logout</a>
         </div>
+    </header>
         <table border="1" class="calendarTable">
             <tr class="dayOfWeek">
                 <th class="sunday">日</th>
