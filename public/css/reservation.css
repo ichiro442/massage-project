@@ -95,7 +95,7 @@ label {
   width: 100%;
 }
 .top_wrapper {
-  height: 60rem;
+  /* height: 60rem; */
   flex-direction: column;
   position: absolute;
   top: 50%;
@@ -205,7 +205,7 @@ select {
 /* 電話予約はこちら */
 footer{
 width: 100%;
-background-color: green;
+background-color: pink;
 }
 .phoneResevation {
   text-align: center;
