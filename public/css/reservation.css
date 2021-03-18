@@ -257,8 +257,8 @@ margin: 0;
 }
 /* /* -----------------------------------予約確認画面-------------------------------------------------- */
 .confirm_wrapper {
-  width: 50%;
-  height: 50rem;
+  width: 100%;
+  height: 60rem;
   margin: 0 auto;
   flex-direction: column;
   background-color: #f7f5f5;
@@ -275,7 +275,7 @@ margin: 0;
 .confirmBox {
   flex-direction: column;
   height: 25rem;
-    width: 100%;
+    width: 95%;
 }
 .confirmTable{
   border: 2px solid gray;
@@ -419,10 +419,10 @@ table tr {
 
   /* --------------------確認画面--------------------------- */
   .confirm_wrapper {
-    width: 100%;
+    height: 50rem;
   }
   .confirm_container h3{
-    width: 100%;
+    width: 95%;
     font-size: 1.4rem;
   }
   .confirm_container {
