@@ -19,23 +19,23 @@
             <div class="confirmBox">
                     <table class="confirmTable">
                         <tr>
-                            <td width="200">名前</td>
+                            <td class="confirmItem" width="200">名前</td>
                             <td width="1000" >{{ $name }}</td>
                         </tr>
                         <tr>
-                            <td width="200">電話番号</td>
+                            <td class="confirmItem" width="200">電話番号</td>
                             <td width="1000">{{ $phoneNumber }}</td>
                         </tr>
                         <tr>
-                            <td width="200">メール <br> アドレス</td>
-                            <td width="1000">{{ $mail }}</td>
+                            <td class="confirmItem" width="200">メール <br> アドレス</td>
+                            <td class="confirmMail" width="1000">{{ $mail }}</td>
                         </tr>
                         <tr>
-                            <td width="200">日にち</td>
+                            <td class="confirmItem" width="200">日にち</td>
                             <td width="1000">{{ $calendar }}</td>
                         </tr>
                         <tr>
-                            <td width="200">時間帯</td>
+                            <td class="confirmItem" width="200">時間帯</td>
                             <td width="1000">{{ $times }}</td>
                         </tr>
                     </table>

@@ -322,11 +322,18 @@ table {
   height: 100%;
   display: block;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 table td {
   height: 4rem;
   font-weight: bold;
+}
+.confirmItem{
+  width: 4rem;
+}
+.confirmMail{
+  
 }
 table tr {
   width: 100%;
