@@ -25,6 +25,9 @@
             .aTags {
                 margin: 1rem;
             }
+            .authLink {
+                font-size: 1.5rem;
+            }
         </style>
     </head>
     <body class="antialiased">
@@ -40,12 +43,12 @@
                             @if (Route::has('login'))
                                 <div class="fixed px-6 py-4 sm:block">
                                     @auth
-                                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline authLink">Home</a>
                                     @else
-                                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+                                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline authLink">Log in</a>
 
                                         @if (Route::has('register'))
-                                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline authLink">Register</a>
                                         @endif
                                     @endauth
                                 </div>
