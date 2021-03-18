@@ -2,7 +2,7 @@
 <html lang="la">
 <head>
     <meta charset="UTF-8">
-    <title>PHPカレンダー</title>
+    <title>予約管理カレンダー</title>
     <link rel="stylesheet" href="{{ asset('css/calendar.css') }}">
 </head>
 <body>

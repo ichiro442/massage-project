@@ -37,6 +37,8 @@ body {
     text-align: center;
 }
 .thisMonth {
+    width: 90%;
+    margin: 0 auto;
     background-color: pink;
     justify-content: space-between;
 }
