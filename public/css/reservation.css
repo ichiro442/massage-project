@@ -232,15 +232,15 @@ margin: 0;
     opacity: 1;
   }
 }
-/*下からフェードイン*/
-.fade-in-top {
+/*左からフェードイン*/
+.fade-in-left {
   opacity: 0;
-  animation-name: fadein-top;
+  animation-name: fadein-left;
   animation-duration: 12s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
-@keyframes fadein-top {
+@keyframes fadein-left {
   0% {
     opacity: 0;
     transform: translateX(-500px) translateY(0);
@@ -256,30 +256,7 @@ margin: 0;
   }
 }
 /* ここまでが文字が浮かび上がってくる処理 */
-/*左からフェードイン*/
-.fade-in-left {
-  opacity: 0;
-  animation-name: fadein-left;
-  animation-duration: 1.3s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-@keyframes fadein-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-300px);
-  }
-  50% {
-    opacity: 0.3;
-    transform: translateX(-150px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-/* -----------------------------------予約確認画面-------------------------------------------------- */
+/* /* -----------------------------------予約確認画面-------------------------------------------------- */
 .confirm_wrapper {
   width: 50%;
   height: 60rem;
@@ -376,10 +353,10 @@ table tr {
       width: 100%;
   }
   .bodyImgs {
-    height: 30rem;
+    height: 35rem;
   }
   .bodyImg {
-    height: 30rem;
+    height: 35rem;
   }
   .titleImg {
     width: 20rem;
@@ -396,6 +373,26 @@ table tr {
   label {
     font-size: 0.8rem;
   }
+  /* フェードイン */
+/* .text-focus-in {
+  -webkit-animation: text-focus-in 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+} */
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    width: 5rem;
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    width: 20rem;
+    opacity: 1;
+  }
+}
+
   /* --------------------確認画面--------------------------- */
   .confirm_wrapper {
     width: 100%;
