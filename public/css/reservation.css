@@ -373,11 +373,11 @@ table tr {
   label {
     font-size: 0.8rem;
   }
-  /* フェードイン */
-/* .text-focus-in {
+/* フェードイン */
+.text-focus-in {
   -webkit-animation: text-focus-in 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: text-focus-in 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-} */
+}
 @-webkit-keyframes text-focus-in {
   0% {
     -webkit-filter: blur(12px);
@@ -392,6 +392,30 @@ table tr {
     opacity: 1;
   }
 }
+/*左からフェードイン*/
+.fade-in-left {
+  opacity: 0;
+  animation-name: fadein-left;
+  animation-duration: 12s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px) translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-500px) translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
 
   /* --------------------確認画面--------------------------- */
   .confirm_wrapper {
