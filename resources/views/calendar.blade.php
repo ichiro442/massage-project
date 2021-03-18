@@ -8,7 +8,7 @@
 <body>
 
 <div class="container">
-    <header>
+    <header class="calendarHeader">
         <div class="thisMonth flex">
             <span></span>
             <h3><a class="beforeMonth" href="?ym={{ $prev }}">&lt;</a> {{ $title }}<a class="afterMonth" href="?ym={{ $next }}">&gt;</a></h3>

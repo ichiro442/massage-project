@@ -20,8 +20,8 @@ h3 {
     font-size: 1.8rem;
 }
 /* body */
-header{
-    width: 95%;
+.calendarHeader{
+    width: 100%;
     background-color: pink;
 
 }
@@ -35,7 +35,6 @@ body {
     width: 100%;
     height: 54rem;
     text-align: center;
-    background-color: pink;
 }
 .thisMonth {
     background-color: pink;
