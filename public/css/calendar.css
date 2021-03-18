@@ -23,7 +23,6 @@ h3 {
 .calendarHeader{
     width: 100%;
     background-color: pink;
-
 }
 body {
     margin: 0;
@@ -172,6 +171,7 @@ header {
     height: 1.8rem;
     margin: 0.5rem;
     background-color: #f17188;
+    line-height: 1.8rem;
 }
 /* ---------------------------------------------------レスポンシブ------------------------------------------------------------------------ */
 /* -------------------カレンダー--------------------- */
@@ -185,5 +185,11 @@ header {
     .customerContainer {
         width: 90%;
     }
-    
+    .customerBtns{
+        width: 60%;
+        margin: 0.5rem;
+    }
+    .customerBtn {
+        line-height: 1.8rem;
+    }
 }

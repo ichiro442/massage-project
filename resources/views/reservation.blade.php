@@ -16,18 +16,13 @@
   <body class="flex">
     <div class="bodyImgs">
       <img class="bodyImg" src="img/green.jpeg" alt="">
-      <!-- <img class="bodyImg"  src="https://cdn.pixabay.com/photo/2016/06/09/03/03/sky-1445077_1280.jpg" alt=""> -->
     </div>
    <div class="top_section" id="app">
     <div class="container fadein">
-      <div class="top_wrapper flex">
-      <img class="titleImg text-focus-in" src="img/massageTitle.jpg" alt="">
-        <!-- <h1 class="text-focus-in">心温</h1> -->
-        <h2 class="fade-in-top">パートナーマッサージ専門</h2>
-      </div>
-      <!-- <div class="internetBtns button fade-in-left  flex">
-        <p class="internetBtn" type="button" @click="show=!show">ネット予約画面へ</p>
-      </div>     -->
+        <div class="top_wrapper flex">
+            <img class="titleImg text-focus-in" src="img/ssinon.green.jpeg" alt="">
+            <h2 class="fade-in-top">パートナーマッサージ専門</h2>
+        </div>
       <!------------------------------ 入力フォーム --------------------------------------->
       <div class="reservationBox flex fadein_left">
       <div class="form_wrapper">

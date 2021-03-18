@@ -27,6 +27,7 @@
             }
             .authLink {
                 font-size: 1.5rem;
+                text-decoration: none;
             }
         </style>
     </head>
