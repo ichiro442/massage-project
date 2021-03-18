@@ -65,7 +65,7 @@
           </div>
         </form>
       </div>
-      @if ($errors->any())
+      <!-- @if ($errors->any())
 					<div class="alert edit-new alert-danger">
 						<ul>
 							@foreach ($errors->all() as $error)
@@ -73,7 +73,7 @@
 							@endforeach
 						</ul>
 					</div>
-				@endif
+				@endif -->
       </div>
       <footer>
         <div class="phoneResevation fadein">
