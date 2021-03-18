@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="{{ asset('css/reservation.css') }}">
     <title>確認画面</title>
 </head>
-<body class="app flex">
-    <div class="bodyImgs confirmImgs">
+<body class="confirmBody flex">
+    <!-- #f7f5f5 -->
+    <!-- <div class="bodyImgs confirmImgs">
       <img class="bodyImg connfirmImg" src="../img/green.jpeg" alt="森林の画像">
-    </div>
+    </div> -->
     <div class="confirm_wrapper flex">
         <div class="confirm_container flex">
             <h3>以下の内容でご予約を承りました。<br>
