@@ -137,30 +137,47 @@ header {
     flex-flow: column wrap;
 }
 /* ---------------------------customer.blade.php 顧客情報ページ--------------------------------- */
-.customerBody {
-    background-color: #31e7f9;
+/* .customerBody {
+    background-color: #fafdfd;
 }
 .customerContainer {
     width: 40%;
     height: 59rem;
     margin: 0 auto;
     flex-direction: column;
+    background-color: red;
 }
 .customerTitle {
     width: 100%;
     height: 4rem;
-    background-color: #f17188;
+    background-color: #ecd6da; 
+}
+.customerLists{
+    width: 100%;
+    background-color: blue;
+    margin: 0 auto;
 }
 .customerList {
+    display: inline-block;
     width: 100%;
     height: 30rem;
-    background-color: #f17188;
+    background-color: #c1bdbe;
 }
-/* .customerContainer tr{
-    background-color: red !important;
-} */
+.customerItem{
+   width: 4.5rem; 
+   height: 6rem;
+   display: flex;
+   flex-wrap: wrap;
+}
+.customerMail{
+    overflow-wrap: break-word;
+}
+.customerm{
+    overflow-wrap: break-word;
+
+}
 .customerContainer td {
-    background-color: #eaea05 !important;
+    background-color: #f9f9ee !important;
 }
 .customerBtns {
     text-align: center;
@@ -170,9 +187,9 @@ header {
     width: 90%;
     height: 1.8rem;
     margin: 0.5rem;
-    background-color: #f17188;
-    line-height: 1.8rem;
-}
+    background-color: #ecd6da;
+    line-height: 1.8rem; 
+} */
 /* ---------------------------------------------------レスポンシブ------------------------------------------------------------------------ */
 /* -------------------カレンダー--------------------- */
 @media screen and (max-width: 480px) {
@@ -185,14 +202,18 @@ header {
         font-size: 1.3rem;
     }
     /* ---------------------顧客入力情報画面-------------------------------- */
-    .customerContainer {
+    /* .customerContainer {
         width: 90%;
     }
+    .customerItem{
+        width: 4rem; 
+     }
+     
     .customerBtns{
         width: 60%;
         margin: 0.5rem;
     }
     .customerBtn {
         line-height: 1.8rem;
-    }
+    } */
 }

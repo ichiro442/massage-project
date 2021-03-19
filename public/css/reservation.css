@@ -256,14 +256,21 @@ margin: 0;
   }
 }
 /* /* -----------------------------------予約確認画面-------------------------------------------------- */
-.confirm_wrapper {
+.confirmBody{
+
+  width: 100%;
+  height: 60rem;
+  /* margin: 0 auto; */
+  flex-direction: column;
+  background-color: #f7f5f5;
+}
+/* .confirm_wrapper {
   width: 100%;
   height: 60rem;
   margin: 0 auto;
   flex-direction: column;
   background-color: #f7f5f5;
-  /* position: absolute; */
-}
+} */
 .confirm_container {
   width: 70%;
   flex-direction: column;
@@ -338,6 +345,18 @@ table tr {
   width: 100%;
   border-bottom: 3px solid #fdfbfb;
 }
+.customerBtns {
+  text-align: center;
+  width: 30%;
+}
+.customerBtn {
+  width: 90%;
+  height: 1.8rem;
+  margin: 0.5rem;
+  background-color: #ecd6da;
+  line-height: 1.8rem; 
+} 
+
 
 /* ----------------------------------レスポンシブ--------------------------------------------- */
 /* --------------予約入力画面------------------------ */
@@ -438,4 +457,14 @@ table tr {
     width: 100%;
     height: 4rem;
   }
+  /* ---------------------顧客予約内容ページ---------------------------- */
+  .customerBtns{
+    width: 50%;
+    margin: 0.5rem;
+  }
+  .customerBtn {
+    line-height: 2rem;
+    height: 2rem;
+  } 
+  
 }
