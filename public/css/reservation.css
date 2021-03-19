@@ -292,6 +292,9 @@ margin: 0;
 .confirmTable tr{
   border: 1px solid gray;
 }
+.comfirm_btns{
+  margin: 6rem;
+}
 .comfirm_btn {
   background-color: #a6f3a6;
   height: 2rem;
@@ -353,6 +356,7 @@ table tr {
   width: 90%;
   height: 1.8rem;
   margin: 0.5rem;
+  color: black;
   background-color: #ecd6da;
   line-height: 1.8rem; 
 } 
@@ -443,6 +447,9 @@ table tr {
 
 
   /* --------------------確認画面--------------------------- */
+  .confirmBody{
+    height: 50rem;
+  }
   .confirm_wrapper {
     height: 50rem;
   }
