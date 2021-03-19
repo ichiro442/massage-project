@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                             <td class="confirmItem" width="200">メール <br> アドレス</td>
-                            <td class="confirmMail" width="1000">{{ $mail }}</td>
+                            <td class="confirmMail" width="1000"><div class="">{{ $mail }}</div></td>
                         </tr>
                         <tr>
                             <td class="confirmItem" width="200">日にち</td>
