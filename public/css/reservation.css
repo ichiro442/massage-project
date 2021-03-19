@@ -11,12 +11,10 @@ html {
   align-items: center;
 }
 a {
-  /* color: white; */
   text-decoration: none;
 }
 h1 {
   font-family: "Hachi Maru Pop", cursive;
-  /* font-family: 'Potta One', cursive; */
   font-size: 15rem;
   color: #062d9f;
   margin: 0;
@@ -39,38 +37,6 @@ input {
 }
 button {
   margin: 1rem;
-}
-/* ボタン光る処理 */
-.button {
-  color: black;
-  position: relative;
-  transition: 800ms ease all;
-}
-.button:hover {
-  background: green;
-  color: #fff;
-}
-.button:before,
-.button:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 2px;
-  width: 0;
-  background: white;
-  transition: 400ms ease all;
-}
-.button:after {
-  right: inherit;
-  top: inherit;
-  left: 0;
-  bottom: 0;
-}
-.button:hover:before,
-.button:hover:after {
-  width: 100%;
-  transition: 800ms ease all;
 }
 /* ------------------------------------reservation.blade.php---------------------------------------------------------------- */
 /* main */
@@ -95,7 +61,6 @@ label {
   width: 100%;
 }
 .top_wrapper {
-  /* height: 60rem; */
   flex-direction: column;
   position: absolute;
   top: 50%;
@@ -119,7 +84,6 @@ label {
 }
 .container {
   width: 100%;
-  /* height: 200rem; */
   flex-direction: column;
 }
 /*-------------------- 予約必須入力項目-------------------- */
@@ -165,11 +129,8 @@ form {
 .timeChoice {
   height: 2rem;
   cursor: pointer;
-  /* color: black; */
   margin: 0.3rem;
   text-align: center;
-  /* border: 2px solid #fff;
-  background-color: aliceblue; */
 }
 .time {
   margin: 1rem;
@@ -189,17 +150,12 @@ select {
   text-align: center;
   margin: 1.5rem;
 }
-.confirmBtn a {
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  background-color: red;
-  padding: 8px 40px;
-}
 .confirmBtn button {
   height: 2rem;
   width: 60%;
   border: 0;
+  background-color: #39ab39;
+  border: 1px solid #4c4a4a;
 }
 /* ------------footer-------------------- */
 /* 電話予約はこちら */
@@ -260,7 +216,6 @@ margin: 0;
 
   width: 100%;
   height: 60rem;
-  /* margin: 0 auto; */
   flex-direction: column;
   background-color: #f7f5f5;
 }
@@ -365,10 +320,6 @@ table tr {
 /* ----------------------------------レスポンシブ--------------------------------------------- */
 /* --------------予約入力画面------------------------ */
 @media screen and (max-width: 480px) {
-  /* 320pxまでの幅の場合に適応される */
-  /* body {
-    background-color: #68b876;
-  } */
   h1 {
     font-size: 3rem;
   }
@@ -402,6 +353,9 @@ table tr {
   label {
     font-size: 0.8rem;
   }
+  .confirmBtn button{
+    width: 40%;
+  }
 /* フェードイン */
 .text-focus-in {
   -webkit-animation: text-focus-in 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -421,30 +375,6 @@ table tr {
     opacity: 1;
   }
 }
-/*左からフェードイン*/
-.fade-in-left {
-  opacity: 0;
-  animation-name: fadein-left;
-  animation-duration: 12s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-@keyframes fadein-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-500px) translateY(0);
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(-500px) translateY(0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
-  }
-}
-
 
   /* --------------------確認画面--------------------------- */
   .confirmBody{
