@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 class ReservationController extends Controller
 {
     function create(){
-
-      // $reservation = \App\Models\Reservation::find(1);
-      // $reservation = \App\Models\Reservation::where("id")->get();
-      // echo $reservation;
-
         return view('reservation');
     }
    
@@ -45,25 +40,5 @@ class ReservationController extends Controller
           $req->session()->regenerateToken();
 
         return view('confirm',compact('name','phoneNumber','mail','calendar','times'));
-    }
-    
-  //   function register(Request $req){
-  //     $name = $req->input("name");
-  //     dd($req);
-  //     $phoneNumber = $req->input("phoneNumber");
-  //     $mail = $req->input("mail");
-  //     $calendar = $req->input("calendar");
-  //     $times = $req->input("times");
-
-  //   // 受け取った情報を保存する
-  //   \App\Models\Reservation::create([
-  //     "name" => $name,
-  //     "phoneNumber" => $phoneNumber,
-  //     "mail" => $mail,
-  //     "calendar" => $calendar,
-  //     "times" => $times
-  //   ]); 
-  //   return redirect("/reservation"); // 一覧にリダイレクトさせる
-  // }
-   
+    }   
 }

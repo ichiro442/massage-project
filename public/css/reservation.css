@@ -1,414 +1,417 @@
 /* 共通 */
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 h1 {
-  font-family: "Hachi Maru Pop", cursive;
-  font-size: 15rem;
-  color: #062d9f;
-  margin: 0;
-  text-shadow: 4px 4px 3px #f5f5f5;
-  font-weight: bold;
+    font-family: "Hachi Maru Pop", cursive;
+    font-size: 15rem;
+    color: #062d9f;
+    margin: 0;
+    text-shadow: 4px 4px 3px #f5f5f5;
+    font-weight: bold;
 }
 h2,
 h3 {
-  color: #062d9f;
-  margin-top: 0;
-  text-shadow: 4px 4px 3px #f5f5f5;
+    color: #062d9f;
+    margin-top: 0;
+    text-shadow: 4px 4px 3px #f5f5f5;
 }
 p {
-  margin-bottom: 2px;
+    margin-bottom: 2px;
 }
 input {
-  width: 100%;
-  height: 9%;
-  font-size: 1rem;
+    width: 100%;
+    height: 9%;
+    font-size: 1rem;
 }
 button {
-  margin: 1rem;
+    margin: 1rem;
 }
 /* バリデーション */
-.alert-danger{
-  color: red;
+.alert-danger {
+    color: red;
 }
-.timesAlert{
-margin-top: 1rem;
+.timesAlert {
+    margin-top: 1rem;
 }
 /* ------------------------------------reservation.blade.php---------------------------------------------------------------- */
 /* main */
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  flex-direction: column;
-  background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    flex-direction: column;
+    background-size: cover;
 }
 .titleImg {
-  display: inline-block;
-  width: 30rem;
-  border-radius: 50%;
+    display: inline-block;
+    width: 30rem;
+    border-radius: 50%;
 }
 label {
-  height: 3rem;
-  font-size: 1.5rem;
-  text-align: center;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 .top_section {
-  width: 100%;
+    width: 100%;
 }
 .top_wrapper {
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  z-index: 4;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 4;
 }
 .bodyImgs {
-  width: 100%;
-  height: 60rem;
-  position: relative;
+    width: 100%;
+    height: 60rem;
+    position: relative;
 }
 .bodyImg {
-  width: 100%;
-  height: 60rem;
-  object-fit: cover;
-  position: absolute;
-  z-index: -5;
+    width: 100%;
+    height: 60rem;
+    object-fit: cover;
+    position: absolute;
+    z-index: -5;
 }
 .container {
-  width: 100%;
-  flex-direction: column;
+    width: 100%;
+    flex-direction: column;
 }
 /*-------------------- 予約必須入力項目-------------------- */
 .reservation {
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .internetBtn {
-  height: 2rem;
-  width: 10rem;
-  text-align: center;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 0;
-  text-align: center;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0;
+    text-align: center;
 }
 .form_wrapper {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 form {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 /* 時間選択 */
 .reservationBox {
-  width: 100%;
-  height: 40rem;
-  background-color: #e4f3e4;
-  margin: 0 auto;
-  flex-direction: column;
+    width: 100%;
+    height: 40rem;
+    background-color: #e4f3e4;
+    margin: 0 auto;
+    flex-direction: column;
 }
 .choiceResult {
-  width: 50%;
-  background-color: #f1d266;
-  text-align: center;
+    width: 50%;
+    background-color: #f1d266;
+    text-align: center;
 }
 .timeChoices {
-  width: 100%;
-  height: 4rem;
+    width: 100%;
+    height: 4rem;
 }
 .timeChoice {
-  height: 2rem;
-  cursor: pointer;
-  margin: 0.3rem;
-  text-align: center;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0.3rem;
+    text-align: center;
 }
 .time {
-  margin: 1rem;
+    margin: 1rem;
 }
 .timeChoiceResult {
-  background-color: #3232b3;
+    background-color: #3232b3;
 }
 .timeResult {
-  color: #fff;
+    color: #fff;
 }
 select {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 /* 予約確認画面へボタン */
 .confirmBtn {
-  text-align: center;
-  margin: 1.5rem;
+    text-align: center;
+    margin: 1.5rem;
 }
 .confirmBtn button {
-  height: 2rem;
-  width: 60%;
-  border: 0;
-  background-color: #39ab39;
-  border: 1px solid #4c4a4a;
+    height: 2.3rem;
+    font-size: 1.5rem;
+    width: 50%;
+    border: 0;
+    background-color: #20e620;
+    border: 1px solid #4c4a4a;
 }
 /* ------------footer-------------------- */
 /* 電話予約はこちら */
-footer{
-width: 100%;
-background-color: pink;
+footer {
+    width: 100%;
+    background-color: #fff;
 }
 .phoneResevation {
-  text-align: center;
+    text-align: center;
 }
-.phoneResevation p{
-margin: 0;
+.phoneResevation p {
+    font-weight: bold;
+    margin: 0;
 }
 /*--------------- フェードイン-------------------- */
 .text-focus-in {
-  -webkit-animation: text-focus-in 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    -webkit-animation: text-focus-in 4s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 @-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    width: 10rem;
-    opacity: 0.2;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    width: 30rem;
-    opacity: 1;
-  }
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        width: 10rem;
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        width: 30rem;
+        opacity: 1;
+    }
 }
 /*-------------------左からフェードイン-------------*/
 .fade-in-left {
-  opacity: 0;
-  animation-name: fadein-left;
-  animation-duration: 12s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+    color: #fff;
+    font-weight: 900;
+    opacity: 0;
+    animation-name: fadein-left;
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 @keyframes fadein-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-500px) translateY(0);
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(-500px) translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(-500px) translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-500px) translateY(0);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
-  }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
 }
 /* /* -----------------------------------予約確認画面-------------------------------------------------- */
-.confirmBody{
-
-  width: 100%;
-  height: 60rem;
-  flex-direction: column;
-  background-color: #f7f5f5;
+.confirmBody {
+    width: 100%;
+    height: 60rem;
+    flex-direction: column;
+    background-color: #f7f5f5;
 }
 .confirm_wrapper {
-  width: 100%;
-  height: 60rem;
-  margin: 0 auto;
-  flex-direction: column;
-  background-color: #f7f5f5;
+    width: 100%;
+    height: 60rem;
+    margin: 0 auto;
+    flex-direction: column;
+    background-color: #f7f5f5;
 }
 .confirm_container {
-  width: 70%;
-  flex-direction: column;
+    width: 70%;
+    flex-direction: column;
 }
-.confirm_container h3{
-  background-color: #a6f3a6;
-  font-size: 1.6rem;
+.confirm_container h3 {
+    background-color: #a6f3a6;
+    font-size: 1.6rem;
 }
 .confirmBox {
-  flex-direction: column;
-  height: 25rem;
+    flex-direction: column;
+    height: 25rem;
     width: 95%;
 }
-.confirmTable{
-  border: 2px solid gray;
-  display: inline-table;
-  background-color: #fff;
+.confirmTable {
+    border: 2px solid gray;
+    display: inline-table;
+    background-color: #fff;
 }
-.confirmTable tr{
-  border: 1px solid gray;
+.confirmTable tr {
+    border: 1px solid gray;
 }
-.comfirm_btns{
-  margin: 6rem;
+.comfirm_btns {
+    margin: 6rem;
 }
 .comfirm_btn {
-  background-color: #a6f3a6;
-  height: 2rem;
-  width: 9rem;
-  margin: 1rem;
-  line-height: 2rem;
-  font-size: 1rem;
-  cursor: pointer;
-  text-align: center;
+    background-color: #a6f3a6;
+    height: 2rem;
+    width: 9rem;
+    margin: 1rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
 }
 .comfirm_btn a {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
 }
 .sendBtns {
-  height: 2rem;
-  width: 9rem;
+    height: 2rem;
+    width: 9rem;
 }
 .sendBtn {
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  font-size: 1rem;
-  background-color: #062d9f;
-  display: block;
-  margin: 0;
-  border: 0;
-  cursor: pointer;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1rem;
+    background-color: #062d9f;
+    display: block;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
 }
 
 table {
-  text-align: left;
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-collapse: collapse;
-  table-layout: fixed;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
 table td {
-  height: 4rem;
+    height: 4rem;
 }
-.confirmItem{
-  width: 4.5rem;
+.confirmItem {
+    width: 4.5rem;
 }
-.confirmMail{
-  overflow-wrap: break-word;
+.confirmMail {
+    overflow-wrap: break-word;
 }
 table tr {
-  width: 100%;
-  border-bottom: 3px solid #fdfbfb;
+    width: 100%;
+    border-bottom: 3px solid #fdfbfb;
 }
 .customerBtns {
-  text-align: center;
-  width: 30%;
+    text-align: center;
+    width: 30%;
 }
 .customerBtn {
-  width: 90%;
-  height: 1.8rem;
-  margin: 0.5rem;
-  color: black;
-  background-color: #ecd6da;
-  line-height: 1.8rem; 
-} 
-
+    width: 90%;
+    height: 1.8rem;
+    margin: 0.5rem;
+    color: black;
+    background-color: #ecd6da;
+    line-height: 1.8rem;
+}
 
 /* ----------------------------------レスポンシブ--------------------------------------------- */
 /* --------------予約入力画面------------------------ */
 @media screen and (max-width: 480px) {
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  .reservationBox {
-    height: 31rem;
-    flex-direction: column;
-  }
-  .top_wrapper{
-      width: 100%;
-  }
-  .bodyImgs {
-    height: 35rem;
-  }
-  .bodyImg {
-    height: 35rem;
-  }
-  .titleImg {
-    width: 20rem;
-  }
-  .reservation {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .form_wrapper {
-    width: 100%;
-    height: 20rem;
-  }
-  label {
-    font-size: 0.8rem;
-  }
-  .confirmBtn button{
-    width: 40%;
-  }
-/* フェードイン */
-.text-focus-in {
-  -webkit-animation: text-focus-in 4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    width: 5rem;
-    opacity: 0.2;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    width: 20rem;
-    opacity: 1;
-  }
-}
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .reservationBox {
+        height: 31rem;
+        flex-direction: column;
+    }
+    .top_wrapper {
+        width: 100%;
+    }
+    .bodyImgs {
+        height: 35rem;
+    }
+    .bodyImg {
+        height: 35rem;
+    }
+    .titleImg {
+        width: 20rem;
+    }
+    .reservation {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .form_wrapper {
+        width: 100%;
+        height: 20rem;
+    }
+    label {
+        font-size: 0.8rem;
+    }
+    .confirmBtn button {
+        width: 40%;
+    }
+    /* フェードイン */
+    .text-focus-in {
+        -webkit-animation: text-focus-in 4s
+            cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+        animation: text-focus-in 7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    }
+    @-webkit-keyframes text-focus-in {
+        0% {
+            -webkit-filter: blur(12px);
+            filter: blur(12px);
+            width: 5rem;
+            opacity: 0.2;
+        }
+        100% {
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+            width: 20rem;
+            opacity: 1;
+        }
+    }
 
-  /* --------------------確認画面--------------------------- */
-  .confirmBody{
-    height: 50rem;
-  }
-  .confirm_wrapper {
-    height: 50rem;
-  }
-  .confirm_container h3{
-    width: 95%;
-    font-size: 1.4rem;
-  }
-  .confirm_container {
-    width: 100%;
-  }
-  table td {
-    width: 100%;
-    height: 4rem;
-  }
-  /* ---------------------顧客予約内容ページ---------------------------- */
-  .customerBtns{
-    width: 50%;
-    margin: 0.5rem;
-  }
-  .customerBtn {
-    line-height: 2rem;
-    height: 2rem;
-  } 
-  
+    /* --------------------確認画面--------------------------- */
+    .confirmBody {
+        height: 50rem;
+    }
+    .confirm_wrapper {
+        height: 50rem;
+    }
+    .confirm_container h3 {
+        width: 95%;
+        font-size: 1.4rem;
+    }
+    .confirm_container {
+        width: 100%;
+    }
+    table td {
+        width: 100%;
+        height: 4rem;
+    }
+    /* ---------------------顧客予約内容ページ---------------------------- */
+    .customerBtns {
+        width: 50%;
+        margin: 0.5rem;
+    }
+    .customerBtn {
+        line-height: 2rem;
+        height: 2rem;
+    }
 }
