@@ -16,36 +16,34 @@ class ReservationController extends Controller
     }
    
     function send(Request $req){
-        $req->validate([
+      
+      $req->validate([
             // バリデーション
             'name' => 'required',
-            'phoneNumber' => 'required | max:11 ',
+            'phoneNumber' => 'required | max:11',
             'mail' => 'required',
             'calendar' => 'required',
             'times' => 'required'
           ],
-          [
-            "name" => "名前は必須です",
-            "phoneNumber" => '電話番号は必須です',
-            "mail" => "メールアドレスは必須です",
-            "calendar" => "日にちは必須です",
-            "times" => "時間帯は必須です"
-          ]
         );
         $name = $req->input("name");
         $phoneNumber = $req->input("phoneNumber");
         $mail = $req->input("mail");
         $calendar = $req->input("calendar");
         $times = $req->input("times");
-
+        
         //  受け取った情報を保存する
-    \App\Models\Reservation::create([
-      "name" => $name,
-      "phoneNumber" => $phoneNumber,
-      "mail" => $mail,
-      "calendar" => $calendar,
-      "times" => $times
-    ]); 
+        \App\Models\Reservation::create([
+          "name" => $name,
+          "phoneNumber" => $phoneNumber,
+          "mail" => $mail,
+          "calendar" => $calendar,
+          "times" => $times
+          ]); 
+          
+          // 二重送信対策
+          $req->session()->regenerateToken();
+
         return view('confirm',compact('name','phoneNumber','mail','calendar','times'));
     }
     
