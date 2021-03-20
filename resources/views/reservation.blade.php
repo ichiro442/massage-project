@@ -27,26 +27,26 @@
         {{ csrf_field() }}
           <div class="reservation flex">
             <p>お客様情報</p>
-            <input type="text" placeholder="お名前" name="name" value="" />
+            <input type="text" placeholder="お名前" name="name" value="{{ old('name') }}" />
             @if($errors->has('name'))
               <div class="alert-danger">
                 {{ $errors->first('name') }}
               </div>
             @endif
-            <input type="text" placeholder="お電話番号(ハイフンなし)" name="phoneNumber" value="" />
+            <input type="text" placeholder="お電話番号(ハイフンなし)" name="phoneNumber" value="{{ old('phoneNumber') }}" />
             @if($errors->has('phoneNumber'))
               <div class="alert-danger">
                 {{ $errors->first('phoneNumber') }}
               </div>
             @endif
-            <input type="text" placeholder="メールアドレス" name="mail" value="" />
+            <input type="text" placeholder="メールアドレス" name="mail" value="{{ old('mail') }}" />
               @if($errors->has('mail'))
                 <div class="alert-danger">
                   {{ $errors->first('mail') }}
                 </div>
               @endif
             <p>日にち選択</p>
-            <input type="date" name="calendar"/>
+            <input type="date" name="calendar" value="{{ old('calendar') }}"/>
             @if($errors->has('calendar'))
               <div class="alert-danger">
                 {{ $errors->first('calendar') }}
