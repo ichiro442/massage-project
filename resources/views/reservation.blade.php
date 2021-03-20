@@ -28,21 +28,41 @@
           <div class="reservation flex">
             <p>お客様情報</p>
             <input type="text" placeholder="お名前" name="name" value="" />
+            @if($errors->has('name'))
+              <div class="alert-danger">
+                {{ $errors->first('name') }}
+              </div>
+            @endif
             <input type="text" placeholder="お電話番号" name="phoneNumber" value="" />
+            @if($errors->has('phoneNumber'))
+              <div class="alert-danger">
+                {{ $errors->first('phoneNumber') }}
+              </div>
+            @endif
             <input type="text" placeholder="メールアドレス" name="mail" value="" />
+              @if($errors->has('mail'))
+                <div class="alert-danger">
+                  {{ $errors->first('mail') }}
+                </div>
+              @endif
             <p>日にち選択</p>
             <input type="date" name="calendar"/>
+            @if($errors->has('calendar'))
+              <div class="alert-danger">
+                {{ $errors->first('calendar') }}
+              </div>
+            @endif
             <p>時間帯選択</p>
             <div class="timeChoices flex">
               <label for="">
                 <input 
-                  type="radio"
+                type="radio"
                   name="times" 
                   value="午前の部(10:00~12:00)" 
                   class="timeChoice morning" 
                   @click="choiceMorning('午前の部(10:00~12:00)')">午前の部(10:00~12:00)
                 </label>
-              <label for="">
+                <label for="">
                   <input 
                   type="radio" 
                   name="times" 
@@ -52,28 +72,24 @@
                 </label>
                 <label for="">
                   <input 
-                    type="radio" 
-                    name="times" 
-                    value="夜の部(18:00~20:00)" 
-                    class="timeChoice night" 
-                    @click="choiceNight('夜の部(18:00~20:00)')">夜の部(18:00~20:00)
+                  type="radio" 
+                  name="times" 
+                  value="夜の部(18:00~20:00)" 
+                  class="timeChoice night" 
+                  @click="choiceNight('夜の部(18:00~20:00)')">夜の部(18:00~20:00)
                 </label>
-                </div>
-          </div>
+              </div>
+            </div>
+            @if($errors->has('times'))
+            <div class="alert-danger timesAlert flex">
+                {{ $errors->first('times') }}
+            </div>
+              @endif
           <div class="confirmBtn">
             <button class="button">送信</button>
           </div>
         </form>
       </div>
-      @if ($errors->any())
-					<div class="alert edit-new alert-danger">
-						<ul>
-							@foreach ($errors->all() as $error)
-								<li>{{ $error }}</li>
-							@endforeach
-						</ul>
-					</div>
-				@endif
       </div>
       <footer>
         <div class="phoneResevation fadein">

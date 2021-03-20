@@ -19,7 +19,7 @@ class ReservationController extends Controller
         $req->validate([
             // バリデーション
             'name' => 'required',
-            'phoneNumber' => 'required',
+            'phoneNumber' => 'required | max:12 | integer',
             'mail' => 'required',
             'calendar' => 'required',
             'times' => 'required'

@@ -38,6 +38,13 @@ input {
 button {
   margin: 1rem;
 }
+/* バリデーション */
+.alert-danger{
+  color: red;
+}
+.timesAlert{
+margin: 0.5rem;
+}
 /* ------------------------------------reservation.blade.php---------------------------------------------------------------- */
 /* main */
 body {
