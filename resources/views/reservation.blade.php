@@ -33,7 +33,7 @@
                 {{ $errors->first('name') }}
               </div>
             @endif
-            <input type="text" placeholder="お電話番号" name="phoneNumber" value="" />
+            <input type="text" placeholder="お電話番号(ハイフンなし)" name="phoneNumber" value="" />
             @if($errors->has('phoneNumber'))
               <div class="alert-danger">
                 {{ $errors->first('phoneNumber') }}
