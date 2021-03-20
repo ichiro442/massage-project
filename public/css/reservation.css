@@ -162,7 +162,7 @@ select {
     font-size: 1.5rem;
     width: 50%;
     border: 0;
-    background-color: #20e620;
+    background-color: #11ec11;
     border: 1px solid #4c4a4a;
 }
 /* ------------footer-------------------- */
@@ -202,6 +202,7 @@ footer {
 .fade-in-left {
     color: #fff;
     font-weight: 900;
+    text-shadow: none;
     opacity: 0;
     animation-name: fadein-left;
     animation-duration: 12s;
