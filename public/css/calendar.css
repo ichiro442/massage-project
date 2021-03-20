@@ -49,7 +49,7 @@ body {
 }
 .calendarTable {
     width: 100%;
-    height: 57rem;
+    height: 100%;
 }
 .dayOfWeek {
     background-color: #aad6ec;
