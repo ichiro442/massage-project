@@ -202,7 +202,17 @@ footer {
 .fade-in-left {
     color: #fff;
     font-weight: 900;
-    text-shadow: none;
+    text-shadow    : 
+    2px  2px 1px #11ec11,
+   -2px  2px 1px #11ec11,
+    2px -2px 1px #11ec11,
+   -2px -2px 1px #11ec11,
+    2px  0px 1px #11ec11,
+    0px  2px 1px #11ec11,
+   -2px  0px 1px #11ec11,
+    0px -2px 1px #11ec11;        
+    /* text-shadow: 4px 3px 1px #09da09; */
+        /* text-shadow: none; */
     opacity: 0;
     animation-name: fadein-left;
     animation-duration: 12s;
@@ -266,6 +276,8 @@ footer {
     background-color: #a6f3a6;
     height: 2rem;
     width: 9rem;
+    color: #fff;
+    font-weight: bold;
     margin: 1rem;
     line-height: 2rem;
     font-size: 1rem;
