@@ -222,16 +222,16 @@ footer {
 @keyframes fadein-left {
     0% {
         opacity: 0;
-        transform: translateX(-500px) translateY(0);
+        transform: translateX(-500px);
     }
     50% {
         opacity: 0;
-        transform: translateX(-500px) translateY(0);
+        transform: translateX(-500px);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0) translateY(0);
+        transform: translateX(0);
     }
 }
 /* /* -----------------------------------予約確認画面-------------------------------------------------- */
