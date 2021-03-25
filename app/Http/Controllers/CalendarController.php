@@ -78,6 +78,10 @@ class CalendarController extends Controller
         $week .= str_repeat('<td></td>' , $youbi);
         // dd($week);→<td></td>
 
+
+        $reservation = \App\Models\Reservation::all();
+        $calendar = $reservation->pluck('calendar');
+        $color = "green";
         for($day = 1; $day <= $day_count; $day++,$youbi++){
             $date = $ym . '-' . $day; //日にちを1日ずつ足していく
             // dd($day);→１
@@ -86,19 +90,41 @@ class CalendarController extends Controller
             //もし今日の日付だったらクラスをつける
             if($today == $date){
                 $ym1 = "{{ $ym}} ";
-                if($day < 10){
-                    $week .= '<td class="today">'.'<a href="dayDetail/' .$ym. '-0'. $day.'">' . $day.'</a>';
+                $todayReservations1 = \App\Models\Reservation::where("calendar",$ym . '-0' . $day)->count();
+                $todayReservations2 = \App\Models\Reservation::where("calendar",$ym . '-' . $day)->count();
+                if($day < 10 ){
+                    if( $todayReservations1 >= 1){
+                        $week .= '<td class="today">'.'<a style=" color: #16c73b !important; text-decoration: 5px underline; font-weight: bold;" href="dayDetail/' .$ym. '-0'. $day.'">' . $day.'</a>';
+                    }else{
+                        $week .= '<td class="today">'.'<a href="dayDetail/' .$ym. '-0'. $day.'">' . $day.'</a>';
+                        }
+                        
                 }else{
-                    $week .= '<td class="today">'.'<a href="dayDetail/' .$ym. '-'. $day.'">' . $day.'</a>';
+                    if( $todayReservations2 >= 1){
+                        
+                        $week .= '<td class="today">'.'<a  style="color: #16c73b !important; text-decoration: 5px underline; font-weight: bold; " href="dayDetail/' .$ym. '-'. $day.'">' . $day.'</a>';
+                        }else{
+
+                            $week .= '<td class="today">'.'<a href="dayDetail/' .$ym. '-'. $day.'">' . $day.'</a>';
+                        }
                 }
-           
-            // print '<a href="download.php?aaa=' . $file . '">'.$title.'</a><br />';
             } else{
+                $todayReservations1 = \App\Models\Reservation::where("calendar",$ym . '-0' . $day)->count();
+                $todayReservations2 = \App\Models\Reservation::where("calendar",$ym . '-' . $day)->count();
+
             //今日以外の日付は普通に出力する
             if($day < 10){
-                $week .= '<td class="dayNumber">'. '<a href="dayDetail/' .$ym.'-0'. $day.'">'. $day.'</a>';
+                if( $todayReservations1 >= 1){
+                    $week .= '<td class="dayNumber">'. '<a style=" color: #16c73b !important; text-decoration: 5px underline; font-weight: bold; " href="dayDetail/' .$ym.'-0'. $day.'">'. $day.'</a>';
+                }else{
+                    $week .= '<td class="dayNumber">'. '<a href="dayDetail/' .$ym.'-0'. $day.'">'. $day.'</a>';
+                }
             }else{
-                $week .= '<td class="dayNumber">'. '<a href="dayDetail/' .$ym.'-'. $day.'">'. $day.'</a>';
+                if( $todayReservations2 >= 1){
+                    $week .= '<td class="dayNumber">'. '<a style=" color: #16c73b !important; text-decoration: 5px underline; font-weight: bold;" href="dayDetail/' .$ym.'-'. $day.'">'. $day.'</a>';
+                }else{
+                    $week .= '<td class="dayNumber">'. '<a href="dayDetail/' .$ym.'-'. $day.'">'. $day.'</a>';
+                }
             }
         }
         $week .= '</td>';

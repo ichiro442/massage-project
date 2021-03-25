@@ -1,3 +1,21 @@
+<?php 
+
+
+// echo $title; 
+// echo '<br>';
+// echo $todayReservations1;
+// $todayReservations1 = 0;
+// if( $todayReservations1 >= 1){
+// echo 'これは'.$color.'です';
+
+// }else{
+//     echo "不合格";
+    
+// }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="la">
 <head>

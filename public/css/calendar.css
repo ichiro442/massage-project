@@ -20,6 +20,11 @@ h3 {
     font-size: 1.8rem;
 }
 /* body */
+
+.reservationColor{
+    color: green !important;
+    font-weight: bold;
+}
 .calendarHeader{
     width: 100%;
     background-color: pink;
