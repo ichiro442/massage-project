@@ -90,9 +90,13 @@ class CalendarController extends Controller
             //もし今日の日付だったらクラスをつける
             if($today == $date){
                 $ym1 = "{{ $ym}} ";
+                //calendarと合う件数を取得
                 $todayReservations1 = \App\Models\Reservation::where("calendar",$ym . '-0' . $day)->count();
                 $todayReservations2 = \App\Models\Reservation::where("calendar",$ym . '-' . $day)->count();
+
+                //1~9日までの処理
                 if($day < 10 ){
+                    //その日の予約が１つでも入っていれば
                     if( $todayReservations1 >= 1){
                         $week .= '<td class="today">'.'<a style=" color: #16c73b !important; text-decoration: 5px underline; font-weight: bold;" href="dayDetail/' .$ym. '-0'. $day.'">' . $day.'</a>';
                     }else{

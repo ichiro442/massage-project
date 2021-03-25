@@ -94,7 +94,7 @@
       <footer>
         <div class="phoneResevation fadein">
           <p>電話予約はこちら</p>
-          <a href="tel:03-3209-1111">03-3209-1111</a>
+          <a href="tel:090-2776-8135">090-2776-8135</a>
         </div>
       </footer>
    </div>
